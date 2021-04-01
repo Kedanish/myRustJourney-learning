@@ -11,7 +11,7 @@ fn new_rec(width: u32, height: u32) -> Rectangle {
 }
 
 //makin fn sturct maker with different inner structure names
-#[allow(dead_code)] //this thing make so much noise i hate it
+#[allow(dead_code)] //this thing make so much noise & i hate it
 fn new_rec1(w: u32, h: u32) -> Rectangle {
     Rectangle {
         width: w,
@@ -23,6 +23,16 @@ fn new_rec1(w: u32, h: u32) -> Rectangle {
 impl Rectangle {
     fn area(&self) -> u32 {
         &self.width * &self.height
+    }
+    fn can_hold(&self, rect: &Rectangle) {
+        if self.height > rect.height && self.width > rect.width {
+            println!("Rec2 can fit in rect3");
+        } else {
+            println!("Rec2 can't fit in rect3");
+        }
+    }
+    fn can_hold_in_it(&self, rect: &Rectangle) -> bool {
+        self.height > rect.height && self.width > rect.width
     }
 }
 //
@@ -49,4 +59,10 @@ pub fn run() {
     //impl
     println!("rec2.area: {}", rec2.area());
     println!("rec3.area: {}", rec3.area());
+    rec3.can_hold(&rec2);
+    if rec3.can_hold_in_it(&rec2) == true {
+        println!("Rec2 can fit in rect3");
+    } else {
+        println!("Rec2 can't fit in rect3");
+    }
 }
