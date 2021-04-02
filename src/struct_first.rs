@@ -1,3 +1,4 @@
+#[derive(Debug)]
 #[allow(dead_code)]
 //makin Rectangle Struction
 struct Rectangle {
@@ -34,10 +35,31 @@ impl Rectangle {
     fn can_hold_in_it(&self, rect: &Rectangle) -> bool {
         self.height > rect.height && self.width > rect.width
     }
+    fn square(size: u32) -> Rectangle {
+        Rectangle {
+            width: size,
+            height: size,
+        }
+    }
+}
+#[derive(Debug)]
+struct Cord(i32, i32);
+impl Cord {
+    fn xy(&self) -> i32 {
+        &self.0 * &self.1
+    }
+    fn equal(cord: i32) -> Cord {
+        Cord(cord, cord)
+    }
 }
 //
 #[allow(unused_variables)]
 pub fn run() {
+    let cord = Cord(1, 3);
+    println!("Cord x*y={}", cord.xy());
+    let cord1 = Cord::equal(12);
+    println!("Our Equal Cord :{:?}", cord1);
+    // println!("{}", cord.1);
     //normal
     let rec1 = Rectangle {
         width: 12,
@@ -65,4 +87,7 @@ pub fn run() {
     } else {
         println!("Rec2 can't fit in rect3");
     }
+    //
+    let square = Rectangle::square(12);
+    println!("{:?}", square.height);
 }
