@@ -62,5 +62,5 @@ fn main() {
     //Sample::run();
     //[Sample Ends here]
     //
-    declaring_first::run();
+    declaring_first::main();
 }
