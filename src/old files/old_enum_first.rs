@@ -52,7 +52,6 @@ enum BookGenre {
     Comedy(String),
 }
 #[derive(Debug)]
-
 enum UserInputIfYouWant {
     Num(i32),
     Add,
@@ -70,6 +69,6 @@ fn genre_shower(book: BookGenre) {
 pub fn run() {
     let book1 = BookGenre::Action(String::from("hello"));
     genre_shower(book1);
-    let ifplus = Opperate::Num(32);
-    println!("{}", ifplus);
+    let ifplus = UserInputIfYouWant::Num(32);
+    println!("{:?}", ifplus);
 }
