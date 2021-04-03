@@ -24,7 +24,3 @@ Numbers may additionally be annotated via a suffix or by default.
 Integers default to i32 and floats to f64.
 Note that Rust can also infer types from context.
 */
-
-#[allow(dead_code)]
-#[allow(unused_variables)]
-fn run() {}

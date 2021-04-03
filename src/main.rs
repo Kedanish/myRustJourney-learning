@@ -1,16 +1,21 @@
-#[allow(dead_code)]
-#[allow(unused_variables)]
-#[allow(unused_imports)]
-//mod comes here
+mod arrays_slices;
 mod comments;
+mod declaring_first;
 mod formatted_print_idk;
 mod hello_world;
+mod literals_operators;
 mod primitives;
+
 /*
 1- hello_world
-2- comments
-3- formatted_print_idk
-4- primitives
+    1.1- comments
+    1.2- formatted_print_idk
+2- primitives
+    2.1- literals_operators
+    2.2 - tuples
+    2.3 - arrays_slices
+3-
+4-
 5-
 6-
 7-
@@ -48,15 +53,14 @@ mod primitives;
 
 
 */
+#[allow(dead_code)]
+#[allow(unused_variables)]
+#[allow(unused_imports)]
 fn main() {
     //
     //[Sample starts here]
-    //Sample::hellow_world();
-    //[Sample world starts here]
+    //Sample::run();
+    //[Sample Ends here]
     //
-    //[hellow world starts here]
-    //hello_world::hellow_world();
-    //[ends here world starts here]
-    //
-    //
+    declaring_first::run();
 }
